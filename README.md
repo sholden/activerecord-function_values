@@ -20,13 +20,17 @@ Or install it yourself as:
 
 Require the proper file for your connection adapter in your Gemfile, like:
 
+```ruby
 gem 'activerecord-function_values', require: 'activerecord/function_values/mysql2'
+```
 
 Now you can set values to arel functions:
 
+```ruby
 model = Model.new
 model.name = Arel::Nodes::NamedFunction.new('CONCAT', %w{hello world})
 model.save
+```
 
 ## Contributing
 
